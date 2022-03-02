@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     
     # Load current count
-    f = open("count.txt", "r")
+    f = open("contador.txt", "r")
     count = int(f.read())
     f.close()
 
@@ -14,7 +14,7 @@ def index():
     count += 1
 
     # Overwrite the count
-    f = open("count.txt", "w")
+    f = open("contador.txt", "w")
     f.write(str(count))
     f.close()
 
